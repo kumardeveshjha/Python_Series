@@ -1,0 +1,230 @@
+
+File_1 Module_1 :: OOP_1.py
+
+What is oops?
+Object Oriented Programming.
+
+Why? 
+-- Generality to specificity 
+
+
+OOPs is a powerful programming method/paradigm which gives programmer to create own DataType
+
+--OOP Concepts 
+1. Object 
+2. class
+3. Polymorphism
+4. Encapsulation
+5. Inheritance
+6. Abstraction
+
+
+1 Classes: 
+
+  Class is a blueprint for creating objects
+  Object is an instance of a class
+  Class has two main componets 
+  1. Attributes (data members) or properties
+  2. Methods (functions)
+
+  Syntax to create a object
+  object_name = ClassName() # object_name is the instance of the class
+
+Constructor function 
+ -- It is a special function which we do not need to call it explicitely it call itself
+
+Methods Vs Functions 
+-- The function created/implemented in the class is known method
+-- When a function is independent outside the class is known as function 
+
+ L = [1,2,3]
+ len(L)       // this is function 
+ L.append()   // this is method
+
+ class diagram 
+ + --> public
+ - --> private 
+
+ magic methods // Dunder Method 
+
+ -- special method --> superpower 
+__name__   like __init__
+
+Magic methods gives power to make our own datatype 
+
+## Constructor 
+-- What is constructor 
+-- It is a method - function defined inside class, it is a special method and it has got a super power. 
+   We don't need to call it 
+
+""we use constructor function to write configuration related code becuase constructor is a function whose control is not in the hand of user""
+
+when we don't want to give power to the user and wanted to execute any function or method that execute self we make it in constructor
+
+## Self ?
+
+*** Golden Rule of OOPs in Python ***
+--Only class object can access the methods and data
+
+"self -----> object : because it shares the same memory address as object"
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+File part 2 :: OOPS Part --> 2
+
+
+Encapsulation 
+
+always remember that if we create any object and try to access any method then the first object is always the argument. 
+
+like line.methodname() then the line is the first argument of that method because it is used by the class object 
+
+
+** How a object access the attributes 
+
+Object has the power to access all the attributes from the class
+
+Also we can create a method or attriibute outside from the class using class object 
+
+
+# Reference Variable 
+
+These holds the objects 
+we can create objects without reference variables 
+an object can have multiple reference variables 
+assigning a new reference variable to an existing object does not create a new object 
+
+
+
+# Encapsulation 
+
+ 1. Instance variable : The variable whose value is different for different varables.
+ 2. Encapsulation is a mechanism in which we want to protect our methods and attributes of a class so it can not be accessed from outside
+ 3. for this purpose we use __attribute/method_name 
+ 4. Two attributes of encapsulation are getter and setter
+
+When You wanted to give access of the private attributes/ methods use getter and setter methods to protect them 
+
+-- The access of that private data is inside the class so the methods can access them all 
+
+So, here use getter and setter 
+
+Getter --> To give access/ show the private data outside the class
+setter --> To change the private value outside
+
+
+collection of objects 
+
+ We can create our object and store them as a collection 
+
+
+ Static Variable : It is a variable of class (This is general/common)
+ instance variable : It is a variable of object (this is a usinque method for the object )
+ the static variable's value is same for every object
+ 
+ The static methods are defined as @staticmethod 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+File 3 :: OOP_3.py
+
+
+Class Relationship 
+1. Aggregation 
+2. Inheritance 
+
+Aggregation: One class owns the other class / A classs has a relationship 
+
+** In class diagram we use 'dimond' on the class which aggregates the other class 
+
+--Inheritance
+  Inheretance : A child class owns the properties of the parent class 
+  It helps in making 'DRY' concept means we must choose some of the variables which can inherited or used by another class
+  always think which properties we can insert in the parent class 
+# It helps in code reusability 
+  In inheritance the object of child class always first check it's own methods and properties then look into the parent class
+
+-- In class diagram there is a sign of arrow for the parent class 
+
+** What can be inherited
+ 1. Constructor
+ 2. Non-private attributes
+ 3. Non private methods 
+ 
+If child has no it's own constructor it will use parent constructor
+
+-- When child has it's own constructor then it will not call the parents constructor 
+   then all the variables in parent class will not be accessible
+-- Method Overriding means: That the method of the construction has higher priority 
+
+
+#### Super Keyword 
+--- It is useful when we want to access the parent class variables/methods 
+--- It allows to use/ access the values from the parent class even if child class has it's own constructor 
+--- We can not use it outside the class 
+--- You can not access the attibutes using super but only metods 
+
+::******** Type Of Inheritance *****:::
+ 
+1. Single Inheritance 
+2. Multilevel Inheritance 
+3. Hierachical 
+4. Multiple Inheritance(Diamond Problem)
+5. Hybrid Inheritance
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;
+**** ### OOPS Part 4 #### ****
+
+Polymorphism 
+
+
+Abstraction 
+# Abstraction : It means hidden 
+
+# An abstraction class is something in which there should be atleast on abstract method 
+# An abstract method is a special method in which there is no code but you will use a decorator named @abstractmethod 
+# it is used to ensure security 
+
+when we create the object of the abstract class it is not possible because Can't instantiate abstract class BankAPP with abstract method security
+
+**** Abstraction is more useful when we wanted to make the parent class secure and to direct the security in tye child class 
+
+######  Interview Question 
+
+1.-- ClassMethod vs Static method 
+
+2.-- The diamond problem 
+  
+                    |A| Class A
+                .          .
+               .             .
+              .               .
+            |B| Class B       |C| Class B
+               .               .
+                 .           .
+                   .  |D|  .
+
+                     Class D
+
+In this method resolution order means jo pehala hai woh hi execute hoga 
+jo class hum pehale inherite kar rahe hai usaka method call hoga 
+
+3-- What is the meaning of single and double underscore in python variable method 
+
+There are fve types of using single and double underscore 
+1._var(single leading underscored) means it will use in the class bahar se use math karo but kar sakte ho  
+2.var_(Single trailing underscore) : when we are using keyword as a variable 
+3.__var (Double leading underscore): Private and name mangling 
+4.__var__ (both leading and trailing underscore) : magic method 
+5 _   : Temporary or insignificant variable 
+
+
+4 -- Magic method(repr vs str):
+  str - meant to be more readable.
+  repr = for being unambigouss (it shows more technical details)
+
+
+
+

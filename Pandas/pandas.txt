@@ -1,0 +1,9 @@
+# Pandas 
+
+Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+
+There are many objects in the panadas, but the two main tool are:
+1. Pandas Series
+2. Pandas DataFrame
+
+

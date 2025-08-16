@@ -65,7 +65,7 @@ print(marks_series.values)
 
 # Series using read_csv  --> Real World Dataset for csv files
 
-my_subs = pd.read_csv("dataset/subs.csv",s)
+my_subs = pd.read_csv("dataset/subs.csv")
 
 print(my_subs)
 

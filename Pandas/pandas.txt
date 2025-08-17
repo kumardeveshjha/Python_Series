@@ -6,4 +6,25 @@ There are many objects in the panadas, but the two main tool are:
 1. Pandas Series
 2. Pandas DataFrame
 
+## The pandas series objects 
+
+1. When we make any series object from a given list it automatically adds the index. 
+2. we have also option to make a custom oject by making two diffrent lists and pass one as the insdex
+3. We can also use python dictionary as key value pair. 
+
+##  Now we come to the real world data 
+
+1. We uses the pd.read_csv (For comma separated values) files
+2. Now then storing that data and convert this data to series to DataFrame
+
+3. using squeeze() method we can convert the data from DataFrame to series 
+
+## Important Methods of Series when reading the realtime data
+
+1. Head() and tail() :-> These gives upper or lower top bottom 5 data rows 
+2. sample() :-> Gives randomaly data rows
+
+
+
+
 

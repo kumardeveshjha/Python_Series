@@ -188,7 +188,77 @@ movies = pd.read_csv('dataset/bollywood.csv',index_col='movie').squeeze()
 
 
 
-# Series with Python functionalities 
+## --> Series with Python functionalities 
+
+# 1. len/type/dir/sorted/max/min 
+
+# print(len(my_subs))
+# print(type(my_subs))
+# print(dir(my_subs))
+# print(sorted(my_subs))
+# print(min(my_subs))
+# print(max(my_subs))
+
+# Type Conversion 
+
+# print(dict(runs))
+
+# print(list(marks))
+
+
+## --> Membership Operator 
+
+# print(movies)
+
+# print('Alia Bhat' in movies.values)
+
+# for i in movies.values:
+#      print(i)
+
+## --> Arithmatic Operators (broadcasting)
+
+# print(kohli_runs)
+# print(100 - kohli_runs)
+
+
+## Relational Operator 
+
+# print(kohli_runs.values >= 50)
+
+
+
+##--> Boolean idexing on series 
+
+# Virat kohli scored more than 50 runs 
+# print(kohli_runs[kohli_runs >= 50].size )
+
+
+# when finding the number of days when chanbe got more than 200 subs 
+
+# print(my_subs[my_subs >=200].size)
+
+# Finding acors who have done more than 20 movies 
+
+num_movies = movies.value_counts()
+
+# print(num_movies[num_movies > 20])
+
+
+# plotting Graph on series 
+
+import matplotlib.pyplot as plt
+my_subs.plot()
+plt.show()
+
+num_movies.head(20).plot(kind='pie')
+
+plt.show()
+
+
+
+    
+
+
 
 
 

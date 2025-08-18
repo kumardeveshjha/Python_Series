@@ -24,6 +24,15 @@ There are many objects in the panadas, but the two main tool are:
 1. Head() and tail() :-> These gives upper or lower top bottom 5 data rows 
 2. sample() :-> Gives randomaly data rows
 
+## --> We can also use python functionalities in the pandas 
+
+
+####-->  DataFrame 
+
+Dataframe is a object in pandas which stores thetabuler data 
+
+
+
 
 
 

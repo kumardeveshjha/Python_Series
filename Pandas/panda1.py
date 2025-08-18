@@ -19,12 +19,17 @@ import numpy as np
 
 # print(pd.Series(runs,dtype='int32'))
 
+
+## --> Multiple datatype Pandas Series Object 
+# address = ['Mutawai', 'Fatehabad',283111, True]
+# print(pd.Series(address,name="Devesh Ka Address"))
+
 # Cumstom Index 
 
 # marks = [68, 75, 80, 90, 95]
 # subject = ['Math', 'Science', 'English', 'History', 'Geography']
 
-# subject_marks = pd.Series(marks, index=subject)
+# subject_marks = pd.Series(marks, index=subject,name='Custom Indexes are given in this series object')
 # print(subject_marks)
 
 
@@ -38,7 +43,7 @@ marks = {
      'Python': 100
 }
 
-# marks_series = pd.Series(marks,name = "Devesh Ke marks",dtype="int32")
+marks_series = pd.Series(marks,name = "Devesh Ke marks",dtype="int32")
 # print(marks_series)
 
 
@@ -239,7 +244,7 @@ movies = pd.read_csv('dataset/bollywood.csv',index_col='movie').squeeze()
 
 # Finding acors who have done more than 20 movies 
 
-num_movies = movies.value_counts()
+# num_movies = movies.value_counts()
 
 # print(num_movies[num_movies > 20])
 
@@ -247,12 +252,12 @@ num_movies = movies.value_counts()
 # plotting Graph on series 
 
 import matplotlib.pyplot as plt
-my_subs.plot()
-plt.show()
+# my_subs.plot()
+# plt.show()
 
-num_movies.head(20).plot(kind='pie')
+# num_movies.head(20).plot(kind='pie')
 
-plt.show()
+# plt.show()
 
 
 

@@ -261,6 +261,111 @@ import matplotlib.pyplot as plt
 
 
 
+## -->  important series methods
+
+# 1. astype :: # It is used to change/reduce the data type of the series
+
+# print(kohli_runs.astype('int32'))
+
+# between : Gives the values between the given range both included 
+
+# print(kohli_runs[kohli_runs.between(50,100)])
+
+
+# Clip : It is used to limit the values in the series to a given range
+# print(kohli_runs.clip(50,100))
+
+# --> drop_duplicates : It cleans the duplicated values 
+
+temp = pd.Series([1,1,2,2,3,4,5,5,6])
+
+# print(temp)
+# print(temp.drop_duplicates(keep='last'))
+
+# duplicated() : Tells the duplicated values in the series in boolen
+
+# print(temp[temp.duplicated()])
+
+# print(kohli_runs.duplicated().sum())
+ 
+ 
+# temp = pd.Series([1,2,3,np.nan,5,6,np.nan,9,np.nan,10])
+
+# print(temp.size)   # --> it will count aLL THE values from the series
+# print(temp.count()) #--> it will neglect the nan values
+
+ 
+ ## --> isnull  : it tells that how many missing values are there in the given data
+ 
+ 
+# print(temp.isnull().sum())
+
+
+## ---> filna() : this is used to delete the duplicated data 
+
+
+# isin([values]) : this is uded to check specific condition 
+
+# print((kohli_runs == 49) | (kohli_runs == 99))
+
+# print(kohli_runs[kohli_runs.isin([49,99])])
+
+
+##---> apply : it helps in applying any custom logic on series 
+
+
+# print(movies.apply(lambda x:x.split()[0].upper()))
+
+
+# print(my_subs.apply(lambda x: 'goodday' if x>my_subs.mean() else 'bad day' ))
+ 
+
+## -->  copy()  : this gives the copy of the main data 
+
+print(kohli_runs)
+new = kohli_runs.head()
+
+# new[1]  = 100  # it will change the original data
+
+# print(new)
+
+# print(kohli_runs)
+
+
+new_1 = kohli_runs.head().copy()
+
+new_1[1] = 100 
+print(new_1)
+print(kohli_runs)
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 

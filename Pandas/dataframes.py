@@ -80,16 +80,47 @@ movies = pd.read_csv('dataset/bollywood.csv')
 # dwscribe() : To give mathematical summary when we have numerical columns 
 
 # print(movies.describe())
-print(ipl.describe())
+# print(ipl.describe())
 
 ## isnull()
 
-print(ipl.isnull().sum())
+# print(ipl.isnull().sum())
 
-## duplicate()
+## duplicated()
 
-print(ipl.duplicated().sum())
-print(my_data.duplicated().sum())
+# print(ipl.duplicated().sum())
+# print(my_data.duplicated().sum())
+
+
+## Rename() -->  It changes the name of the column 
+
+# my_data.rename(columns={'Marks':'percent','Packages':'lpa'},inplace=True)
+
+# print(my_data)
+
+
+
+## Mathematical Functions 
+
+# Sum : This applies to all the columns and each series of the column
+
+print(movies.sum()) 
+
+print(my_data.sum())
+
+## Now usning : Axis argument 
+
+print(my_data.sum(axis=1))
+print(my_data.mean(axis=1))
+print(my_data.min(axis=1))
+print(my_data.max(axis=1))
+
+
+
+
+
+
+
 
  
 

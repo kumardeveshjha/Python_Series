@@ -4,7 +4,7 @@ Iteration is a general term for taking each item of something. one after another
 # What is a iterator 
 
 A iterator is an object that allows the programmer to traverse through a sequence of data without having to store the entire data into memory.
-Like it takes a sigle data at a single time and load it to the memory and perform any operation task and remove it from memory and continue this process. 
+Like it takes a single data at a single time and load it to the memory and perform any operation task and remove it from memory and continue this process. 
 this helps in memory optimization.
 
 use sys module 

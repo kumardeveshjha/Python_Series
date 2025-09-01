@@ -1,7 +1,7 @@
 num = [1,2,3]
 
-# for i in num:
-#      print(i)
+for i in num:
+     print(i)
 
 
 # step 1: it fetches the iterator using iter()

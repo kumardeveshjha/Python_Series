@@ -137,9 +137,9 @@ my_data_2 = {
      'Packages':[12,18,10,4,0,0]
 }
 
-student = pd.DataFrame(my_data_2,index=my_data_2['name'])
+student = pd.DataFrame(my_data_2)
 
-# print(student)
+print(student)
 
 # iloc - searches using index positions returns a series
 # loc - Searches using index labels basically the names 
@@ -164,16 +164,16 @@ student = pd.DataFrame(my_data_2,index=my_data_2['name'])
 
 
 
-# my_students  = {
-#      'names':["Astha","Neelam","Prachi","Neha","Raj"],
-#      'iq':[110,100,80,120,120],
-#      'marks':[85,85,70,95,95],
-#      'rank':[3,4,5,2,1]
-# }
+my_students  = {
+     'names':["Astha","Neelam","Prachi","Neha","Raj"],
+     'iq':[110,100,80,120,120],
+     'marks':[85,85,70,95,95],
+     'rank':[3,4,5,2,1]
+}
 
-# my_students_data = pd.DataFrame(my_students,index=my_students['names'])
+my_students_data = pd.DataFrame(my_students,index=my_students['names'])
 
-# my_students_data.iloc[2]
+my_students_data
 # my_students_data.iloc[0]
 # my_students_data.loc['Neelam']
 
@@ -188,13 +188,13 @@ student = pd.DataFrame(my_data_2,index=my_data_2['name'])
 
 # using the ipl data 
 
-ipl.head(2)
+# ipl.head(2)
 
 # We will find the winner the final 
 
-mask = ipl['MatchNumber'] == 'Final'
-new_data = ipl[mask]
-new_data[["Season","WinningTeam","Team1","Team2"]]
+# mask = ipl['MatchNumber'] == 'Final'
+# new_data = ipl[mask]
+# new_data[["Season","WinningTeam","Team1","Team2"]]
 
 #%%
 
@@ -216,12 +216,32 @@ new_data[["Season","WinningTeam","Team1","Team2"]]
 
 # movies[(movies['imdb_rating'] > 8) & (movies["imdb_votes"] > 10000)].shape
 
-movies['genres'].str.split('|').apply(lambda x: 'Action' in x)
+# movies[movies['genres'].str.split('|').apply(lambda x: 'Action' in x)]
 
+# spec_1 = movies['genres'].str.contains('Action')
+# spec_2 = movies['imdb_rating'] > 7.5
+
+# movies[spec_1 &  spec_2]
      
 
+##--->> Adding a new column 
+
+# movies['Country'] = "Bharat"
+
+# movies
+
+# Now to show the lead actor 
+
+# actor = movies['actors'].str.split('|')
 
  
+
+
+# Pandas Function 
+
+# ipl.info()
+
+
 
 
 

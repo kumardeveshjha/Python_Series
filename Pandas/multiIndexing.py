@@ -33,15 +33,16 @@ multi_index.levels[0]  # decouples the multi_index into levels
 
 #multi index from product 
 
-multi_2 = pd.MultiIndex.from_product([['cse','ece'],[2018,2019,2020,2021]])
+multi_obj = pd.MultiIndex.from_product([['cse','ece'],[2018,2019,2020,2021]])
 
-multi_2
+# multi_obj
 
 # Creating a series with multiIndex object 
-multi_series = pd.Series([1,2,3,4,5,6,7,8],index=multi_2)
+multi_series = pd.Series([1,2,3,4,5,6,7,8],index=multi_obj)
 
 
 # print(multi_series)
+
 
 #Fetching data from multiindexing series
 # print(multi_series['cse'])  # accessing all the years of cse
@@ -51,11 +52,11 @@ multi_series = pd.Series([1,2,3,4,5,6,7,8],index=multi_2)
 # Yes using unstack() method
 
 multi_df = multi_series.unstack()  # converts multiindex series to dataframe
-# print(multi_series)  
+# print(multi_obj)  
 
 # now convert it back to a series using stack() 
 
-# multi_df.stack()
+# print(multi_df.stack())
 
 
 # Why we need the multiindexing objects
@@ -75,10 +76,11 @@ branch_df = pd.DataFrame([
      [11,12],
      [13,14],
      [15,16]
-],index=multi_2,columns=['average_package','num_of_students'])
+],index=multi_obj,columns=['average_package','num_of_students'])
 
 # print(branch_df)  # accessing all the years of cse for average package
-# print(branch_df['average_package'])  # accessing all the year for average package
+# print(branch_df.iloc[0:6,0:1])  # accessing all the year for average package
+# print(branch_df.loc['cse']['num_of_students'])  # accessing all the year for average package
 
 # using this we can create dataframe using columns and rows both 
 
@@ -91,9 +93,9 @@ branch_df2 = pd.DataFrame([
 ],index=[2020,2021,2022,2023],columns=pd.MultiIndex.from_product([['delhi','mumbai'],['average_package','num_of_students']]))
 
 # in this we have the 3d indexing using index and 2d using the columns 
-print(branch_df2['delhi'])  # accessing all the years of mumbai for average package
+print(branch_df2)  # accessing all the years of mumbai for average package
 # print(branch_df2['delhi']['average_package'])  # accessing all the years of mumbai for average package
-# print(branch_df2.loc[2020])  # accessing all the years of mumbai for average package
+# print(branch_df2.iloc[0: ,0:1]['delhi'])  # accessing all the years of mumbai for average package
 
 
 # %%
@@ -217,7 +219,7 @@ print(branch_df3)
 
 # only at the one level sorting 
 
-print(branch_df3.sort_index(level=1,ascending=[False]))
+# print(branch_df3.sort_index(level=1,ascending=[False]))
 
 
 ###:::::::::::::; Transpose and swaplevel 
@@ -232,9 +234,9 @@ print(branch_df3)
 
 ## Swaplevel :::::: Swapes the levels of the index and columns (levels)
 
-print(branch_df3.swaplevel())  # Swaping the index level 
+# print(branch_df3.swaplevel())  # Swaping the index level 
 
-print(branch_df3.swaplevel(axis=1))
+# print(branch_df3.swaplevel(axis=1))
 
 
 ## Long Vs Wide Data 
@@ -258,7 +260,7 @@ print(branch_df3.swaplevel(axis=1))
 
 # melt --> multiple branch 
 # print(pd.DataFrame({'cse':[120],'ece':[100],'IT':[120],'Mech':[80]}))
-# print(pd.DataFrame({'cse':[120],'ece':[100],'IT':[120],'Mech':[80]}).melt())
+# print(pd.DataFrame({'cse':[120],'ece':[100],'IT':[120],'Mech':[80]}).melt(var_name='branch',value_name='students'))
 
 
 # melt --> complex data beranch with year 
@@ -283,11 +285,12 @@ covid_death = pd.read_csv('dataset_3/time_series_covid19_deaths_global.csv')
 confirm_covid = pd.read_csv('dataset_3/time_series_covid19_confirmed_global.csv')
 
 
-# print(covidz_death.head())
+# print(covid_death.head())
+# print(confirm_covid.head())
 # print(covid_death)
 
 
-# Niw making the data melt 
+# Now making the data melt 
 # converting the long formate data
 
 death = covid_death.melt(id_vars=['Province/State','Country/Region','Lat','Long'],var_name='date',value_name='no_of_deaths')

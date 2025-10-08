@@ -56,7 +56,7 @@ df['Name']
 # split() -- > It splits the string and gives the list 
 # df['Name'].str.split(',')
 
-# But we can get using the 
+# But we can get using the it spreads the split
 
 df['lastname'] =  df['Name'].str.split(',').str.get(0)
 # df.head()

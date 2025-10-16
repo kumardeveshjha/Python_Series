@@ -28,7 +28,7 @@ But in python list the data is stored as the refence the address of teh data.
 
 2. In terms of [memory] 
 
-The numpy takes less storage than the lists because it has multiple ways to store the data 
+The numpy array takes less storage than the lists because it has multiple ways to store the data 
 
 In Short 
 1. The Numpy is faster than the built-in data type of python named Lists 
@@ -38,7 +38,7 @@ In Short
 ## Fancy Indexing and Boolean indexing 
 
 
-# *****************Broadcasting *************************
+# ***************** Broadcasting **********************
 
 Why we need broadcasting ?? 
 When we have [different] [shapes] of [arrays] and want to perform a arithmatical operations 

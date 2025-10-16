@@ -160,8 +160,8 @@ df['Date'].dt.month
 
 #%%
 import matplotlib.pyplot as plt 
-# plt.plot(df['Date'],df['INR'])
-# plt.show()
+plt.plot(df['Date'],df['INR'])
+plt.show()
 
 
 df['Day'] = df['Date'].dt.day_name()

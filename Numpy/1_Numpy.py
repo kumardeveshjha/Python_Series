@@ -19,18 +19,18 @@ import numpy as np
 # print(type(c))
 
 
-#dtype  --> Parameter 
+# dtype  --> Parameter 
 # float, boolean, int
 # a1 = np.array([1,2,3],dtype= bool)
 # print(a1)
 
-#np.arange 
+# np.arange 
 # it works as a range 
 
 # a2 = np.arange(1,11)
 # print(a2)
 
-#With reshape 
+# With reshape 
 # reshape(n1,n2) n1*n2 = n 
 # a3 = np.arange(1,11).reshape(5,2) 
 # print(a3)

@@ -173,45 +173,145 @@ xx, yy = np.meshgrid(x,y)
 xx.shape
 
 z = xx**2 + yy**2
-z.shape
+# z.shape
 
-
+# z = np.sin(xx)+np.cos(yy)
 fig = plt.figure(figsize=(10,10))
 
 ax = plt.subplot(projection='3d')
 
-ax.plot_surface(xx,yy,z,cmap='viridis')
+# circle = ax.plot_surface(xx,yy,z,cmap='viridis')
+
+# fig.colorbar(circle)
+
+
+
+""":::::::::::::::::::::: Contour Graph ::::::::::::::::::::"""
+
+#%%
+# -> this converts the 3d into 2d 
+
+fig = plt.figure(figsize=(12,8))
+
+ax = plt.subplot(projection='3d')
+
+
+circle = ax.contourf(xx,yy,z,cmap='viridis')
+
+plt.show()
 
 
 
 
+""":::::::::::: Heat Map :::::::::::::::"""
+
+#%%
+
+# making a pivot table of the data of ipl per ball 
+delivery = pd.read_csv('dataset_1/IPL_Ball_by_Ball_2008_2022.csv')
+
+delivery.head()
+
+# dataframe filtering
+df = delivery[(delivery['ballnumber'].isin([1,2,3,4,5,6])) & (delivery['batsman_run']==6)]
+
+# making a grid to make a heatmap
+grid = df.pivot_table(index='overs',columns='ballnumber',values='batsman_run',aggfunc='count')
+
+plt.figure(figsize=(12,8))
+
+# imshow() is used to show the heatmap
+plt.imshow(grid)
+plt.yticks(delivery['overs'].unique(),list(range(1,21)))
+plt.xticks(np.arange(0,6),list(range(1,7)))
+plt.colorbar()
 
 
 
 
+#%%
+""" ::::::::::::::: Pandas Plot( ) ::::::::::::::::::    """
+
+
+# ps = pd.Series([1,2,3,4,5])
+
+# ps.plot(kind='pie')
+
+
+import seaborn as sns 
+
+tips = sns.load_dataset('tips')
+
+tips.head()
+
+
+## scatter Plot -> labesl -> markers -> figsize -> color -> cmap
+
+
+# tips.plot(kind='scatter',x ='total_bill',y='tip',title='cost Analysis',marker='*',c='sex',colormap='viridis')
+
+
+## :::::: 2d plot 
+
+stocks = pd.read_csv('https://raw.githubusercontent.com/m-mehdi/pandas_tutorials/main/weekly_stocks.csv')
+
+# stocks.head()
+
+# line plot 
+
+# stocks['MSFT'].plot(kind='line')
+
+# stocks.plot(kind='line',x='Date')
+
+# only two 
+
+# stocks[['FB','MSFT']].plot(kind='line')
+
+
+# Bar chart  single -> Horizontal -> muliple 
+
+# using tips
+# tips.plot(kind='bar',x='sex',y='total_bill')
+
+
+# using group by  --> Because group by used to give groups 
+
+
+tips.groupby('sex')['total_bill'].mean().plot(kind='bar')
+
+
+# Pandas can handle bar chart very efficiently 
+
+# It can help in bar chart, 
+
+
+## histogram using pandas plot function 
+
+stocks[['FB','MSFT']].plot(kind='hist',bins=40)
 
 
 
-# Id
-# SepalLengthCm
-# SepalWidthCm
-# PetalLengthCm
-# Species
+### pie chart using pandas 
+
+#%%
+df = pd.DataFrame(
+    {
+        'batsman':['Dhawan','Rohit','Kohli','SKY','Pandya','Pant'],
+        'match1':[120,90,35,45,12,10],
+        'match2':[0,1,123,130,34,45],
+        'match3':[50,24,145,45,10,90]
+    }
+)
+
+df['match1'].plot(kind='pie',labels=df['batsman'].values,autopct="%0.01f%%")
 
 
 
-# Iris-versicolor  
-# Iris-virginica  
-# Iris-virginica         
-# Iris-setosa  
-# Iris-versicolor
+## pie subplot 
 
+df[['match1','match2','match3']].plot(kind='pie',subplots=True)
 
-
-
-
-
-
+ 
 
 
 

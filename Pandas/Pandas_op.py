@@ -3,6 +3,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt 
 
+
+""" 7 """
+
 #pd.concat
 # df.concat
 # ignore_index 
@@ -24,7 +27,7 @@ matches = pd.read_csv("dataset_2/matches.csv")
 
 #%%
 #::::::::::::--Concat--:::::::::::::::
-#pd.concat : means vertical and horizontal data add 
+# pd.concat : means vertical and horizontal data add 
 # print(courses,deliveries,matches,month_1,month_2,month_3)
 
 #:::::::::::: 1. Vertical dataframes concate 

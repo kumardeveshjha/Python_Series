@@ -30,7 +30,7 @@ print(b.shape[0])
 # print(np.append(b,np.floor(np.random.random((b.shape[0],1)*100),axis=1)))  # appending a row
 
 
-#Concatinate
+# Concatinate
 
 # np.concatenate
 # numpy.concatenate() function concatenate a sequence of arrays along an existing axis.

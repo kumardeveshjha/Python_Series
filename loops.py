@@ -20,7 +20,7 @@ else:
      print("Out of the loop")"""
 
 
-# Randim integer from 1 to hundred
+# Random integer from 1 to hundred
 
 """import random 
 jackpot = random.randint(1,100)

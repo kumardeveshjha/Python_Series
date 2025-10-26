@@ -3,6 +3,10 @@ import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt
 
+
+
+""" 2 """
+
 student_data = [
      [100,70,10],
      [120,100,24],

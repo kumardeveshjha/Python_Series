@@ -98,7 +98,7 @@ assigning a new reference variable to an existing object does not create a new o
 
 # Encapsulation 
 
- 1. Instance variable : The variable whose value is different for different varables.
+ 1. Instance variable : The variable whose value is different for different variables.
  2. Encapsulation is a mechanism in which we want to protect our methods and attributes of a class so it can not be accessed from outside
  3. for this purpose we use __attribute/method_name 
  4. Two attributes of encapsulation are getter and setter
@@ -119,7 +119,7 @@ collection of objects
 
 
  Static Variable : It is a variable of class (This is general/common)
- instance variable : It is a variable of object (this is a usinque method for the object )
+ instance variable : It is a variable of object (this is a unique method for the object )
  the static variable's value is same for every object
  
  The static methods are defined as @staticmethod 

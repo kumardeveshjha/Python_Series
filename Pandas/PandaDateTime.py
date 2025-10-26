@@ -3,6 +3,9 @@
 import numpy as np 
 import pandas as pd 
 
+
+
+""" 8 """
 # Time stamp Object 
 
 # This is a particular moments in time 

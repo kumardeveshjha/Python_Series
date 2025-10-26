@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-
+""" 1 """
 
 # Pandas Series 
 # A Pandas Series is a one-dimensional array-like object that can hold any data type.
@@ -252,6 +252,7 @@ movies = pd.read_csv('dataset/bollywood.csv',index_col='movie').squeeze()
 # plotting Graph on series 
 
 import matplotlib.pyplot as plt
+
 # my_subs.plot()
 # plt.show()
 
@@ -261,7 +262,7 @@ import matplotlib.pyplot as plt
 
 
 
-## -->  important series methods
+## --> important series methods
 
 # 1. astype :: # It is used to change/reduce the data type of the series
 

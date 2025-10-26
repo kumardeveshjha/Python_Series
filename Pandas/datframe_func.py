@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 # %%
 
 
+""" 3 """
+
+
 marks = pd.DataFrame([
      [120,100,36],
      [100,90,18],
@@ -53,7 +56,7 @@ movies = pd.read_csv('dataset/movies.csv')
 
 batsman = pd.read_csv("dataset/batsman_runs_ipl.csv")
 
-## Rank function in Dtafra
+## Rank function in Dtafram
 
 batsman['batting_rank'] = batsman['batsman_run'].rank(ascending=False)
 
@@ -158,7 +161,7 @@ students_data = pd.DataFrame(students)
 
 
 
-# students_data.dropna(how='all')  # jab tak sae column mei null nahi hai tab tak koi bhi row nahi delete hogi 
+# students_data.dropna(how='all')  # jab tak sare column mei null nahi hai tab tak koi bhi row nahi delete hogi 
 
 
 # students_data.dropna(subset=['name'])

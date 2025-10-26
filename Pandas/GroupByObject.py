@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt
 
+""" 4 """
+
 # here we will learn about the group by object 
 
 # GroupBy always applied at categorical data 
@@ -65,7 +67,7 @@ genre = movies.groupby('Genre')
 
 ##  nunique 
 
-# genre.nunique() #means unique values on the basis of column and groups 
+# genre.nunique()     # means unique values on the basis of column and groups 
 
 
 #%%
@@ -121,7 +123,7 @@ genre = movies.groupby('Genre')
 # print(df)
 
 
-## :::::::::::::: apply()--> can make our custom function or logic 
+## :::::::::::::: apply()-->  can make our custom function or logic 
 
 # split(using groupByObject)--> apply(transformation apply) --> combine(data )
 

@@ -6,6 +6,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
+
+""" 6  """
+
 ##::::::::::::::::: Pivot table
 
 # "The pivot table takes simple column-wise data as input, and groups the entries int a two-dimensional table that provides a multidimensional summarization of the data"

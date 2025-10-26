@@ -52,7 +52,7 @@ import numpy as np
 # a6 = np.round(a6*100)
 # print(a6)
 
-#mp.linesopce  --> linear space : it generates points at equal distance 
+# mp.linesopce  --> linear space : it generates points at equal distance 
 
 # print(np.linspace(-10,10,10))
 
@@ -122,7 +122,7 @@ import numpy as np
 
 
 
-#Array Function 
+# Array Function 
 
 # af1 = np.random.random((3,3))
 # af1 = np.round(af1*100)
@@ -218,7 +218,7 @@ import numpy as np
 # for i in a8:    #This will give me the arrays of 2-D
 #      print(i)
 
-# for i in np.nditer(a8):   # This converts the nth dimension array in the single dimensio
+# for i in np.nditer(a8):   # This converts the nth dimension array in the single dimension
 #      print(i)
      
 # :::::::::::::::-----Reshape-----::::::::::::

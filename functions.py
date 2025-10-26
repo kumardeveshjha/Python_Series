@@ -231,7 +231,7 @@ print(a(2))
 a = lambda x,y: x+y
 print(a(1,2))
  
-#Diffrence between lambda and general function 
+# Diffrence between lambda and general function 
 # No Name 
 # Lambda has no return value 
 # It is written in a single line 

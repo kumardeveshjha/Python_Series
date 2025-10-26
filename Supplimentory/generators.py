@@ -53,7 +53,7 @@
 #      for i in range(start,end):
 #           yield i
 # rang = mera_range(15,30)
-# for i in rang:
+# for i in range:
 #      print(i)
 
 # # List Comprehension 

@@ -13,7 +13,7 @@ What is NumPy?
 
 
 
-:::::::::::::::::::: Module [2_Numpy]:::::::::::::::::::::::::
+:::::::::::::::::::: Module [2_Numpy]  :::::::::::::::::::::::::
 
 Numpy Arrays Vs Python Lists 
 

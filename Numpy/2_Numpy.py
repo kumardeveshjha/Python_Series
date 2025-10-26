@@ -38,7 +38,7 @@ import numpy as np
 # print(sys.getsizeof(b))
 
 
-# :::::::::::::::Advanced Indexing::::::::::::::::
+# ::::::::::::::: Advanced Indexing ::::::::::::::::
 # a = np.arange(24).reshape(6,4)
 
 # print(a)

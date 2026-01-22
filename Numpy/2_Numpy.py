@@ -16,6 +16,7 @@
 # print(time.time()-start)
 
 # Numpy 
+# %%
 import numpy as np
 
 # a = np.arange(10000000)
@@ -39,12 +40,13 @@ import numpy as np
 
 
 # ::::::::::::::: Advanced Indexing ::::::::::::::::
+#%%
 # a = np.arange(24).reshape(6,4)
 
 # print(a)
 
 
-#Fancy Indexing 
+# Fancy Indexing 
 # When we desires column or row means smartly handling the selected row or column
 # print(a[:,[0,2,3]])
 # print(a[[0,1],:])
@@ -53,9 +55,9 @@ import numpy as np
 # when we want to extract the data using the logic and data analysis 
 # Best method for data filteration when we have given conditions 
 
-# a1 = np.random.randint(1,100,24).reshape(6,4)
+a1 = np.random.randint(1,100,24).reshape(6,4)
 
-# print(a1)
+print(a1)
 
 # When the number is greater than 50 
 
@@ -204,3 +206,26 @@ import matplotlib.pyplot as plt
 
 
 
+
+# %%
+
+{
+  "name": "Generate Job Description",
+  "type": "n8n-nodes-openai.openAi",
+  "parameters": {
+    "resource": "text",
+    "operation": "complete",
+    "model": "gpt-4",
+    "prompt": "=You are an expert HR professional."
+     "Create a comprehensive job description based on the following information:"
+     "\n\nJob Title: {{$json[\"job_title\"]}}\nDepartment: {{$json[\"department\"]}}"
+     "\nExperience Level: {{$json[\"experience_level\"]}}\n"
+     "Key Responsibilities: {{$json[\"responsibilities\"]}}\n"
+     "Required Skills: {{$json[\"required_skills\"]}}\n\n" 
+     "Use this template structure: {{$json[\"template_content\"]}}\n\n"
+     "Ensure the description is engaging, complete, and includes all necessary sections.",
+    "maxTokens": 1500,
+    "temperature": 0.7
+  }
+}
+# %%

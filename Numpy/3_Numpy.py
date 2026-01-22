@@ -1,7 +1,7 @@
 
 import numpy as np
 
-#Some useful functions of the numpy Array 
+# Some useful functions of the numpy Array 
 
 #np.sort : Ascending sorted Numpy Array array 
 
@@ -57,7 +57,7 @@ print(b.shape[0])
 
 # :::::::::::::::::: --- np.where ----:::::::::::::::::::::
 # The numpy.where() function returns the indices of elements in an input array where the given condition is satisfied.
-#used to apply logic and filter the data 
+# used to apply logic and filter the data 
 
 # print(np.where(a>50))
 # replace all values > 50 with 0
@@ -68,7 +68,7 @@ print(b.shape[0])
 # :::::::::::::::: np.argmax----:::::::::::::::::::::::::::::;
 # The numpy.argmax() function returns indices of the max element of the array in a particular axis.
 
-#  print(np.argmax(a))
+# print(np.argmax(a))
 # np.argmin
 # print(np.argmin(a))
 

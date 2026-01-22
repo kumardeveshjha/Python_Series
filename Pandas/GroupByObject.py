@@ -217,72 +217,21 @@ temp_df.groupby('bowling_team')['batsman_runs'].sum().reset_index()
 
 # Create a function that can return the highest score of any batsman 
 
-temp_run = ipl[ipl['batsman'] == 'V Kohli']
+# temp_run = ipl[ipl['batsman'] == 'V Kohli']
 
-temp_run.groupby('match_id')['batsman_runs'].sum().sort_values(ascending=False).head(1).values[0]
+# temp_run.groupby('match_id')['batsman_runs'].sum().sort_values(ascending=False).head(1).values[0]
 
-def high_score(batsman):
-      temp_run = ipl[ipl['batsman'] == batsman]
-      return temp_run.groupby('match_id')['batsman_runs'].sum().sort_values(ascending=False).head(1).values[0]
+# def high_score(batsman):
+#       temp_run = ipl[ipl['batsman'] == batsman]
+#       return temp_run.groupby('match_id')['batsman_runs'].sum().sort_values(ascending=False).head(1).values[0]
       
       
-high_score("MS Dhoni")
+# high_score("MS Dhoni")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 
-# Series_Title
-# 
-# Released_Year
-# 
-# Runtime
-# 
-# Genre
-# 
-# IMDB_Rating
-# 
-# Director
-
-
-
-
-
-
-
-
-
-
-
-
+ipl
+temp_df = ipl.groupby('batsman')['batsman_runs'].sum().reset_index()
+temp_df
+temp_df.to_csv('batsmanruns_1.csv',index=False)
 
 
 

@@ -177,9 +177,9 @@ import numpy as np
 # print(a3[1,1,1],a3[0,2,1])  # array[shape,]
 
 
-#Slicing   slicing(first,n-1)
+# Slicing  slicing(first,n-1)
 
-# When we want to get multiple Ite,s then we use slicing
+# When we want to get multiple Items then we use slicing
 
 # a4 = np.array([0,1,2,3,4,5,6,7,8,9])
 # print(a4[1:])   
